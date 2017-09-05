@@ -10,7 +10,7 @@ services:
       io.rancher.container.agent.role: environmentAdmin
       io.rancher.container.create_agent: 'true'
   prometheus:
-    image: functions/prometheus:latest
+    image: kenfdev/prometheus:latest-cattle
     environment:
       no_proxy: gateway
     stdin_open: true
