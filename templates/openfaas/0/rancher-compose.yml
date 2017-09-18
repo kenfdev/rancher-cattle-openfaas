@@ -6,8 +6,8 @@
   minimum_rancher_version: v1.5.0
   questions:
      - variable: "CATTLE_URL"
-       description: "The v2-beta Rancher Server Endpoint"
-       label: "Rancher Server Endpoint URL. e.g. https://try.rancher.com/v2-beta"
+       description: "The v2-beta Rancher Server Endpoint. e.g. https://try.rancher.com/v2-beta"
+       label: "Rancher Server Endpoint URL."
        required: true
        type: "string"
      - variable: "CATTLE_ACCESS_KEY"
