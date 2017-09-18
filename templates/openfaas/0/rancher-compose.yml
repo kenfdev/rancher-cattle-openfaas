@@ -1,13 +1,13 @@
 .catalog:
   name: "OpenFaaS"
-  version: "v0.0.1"
+  version: "v0.0.2"
   description: "Enable Rancher as a backend for Functions as a Service (OpenFaaS)"
   uuid: "openfaas-0"
   minimum_rancher_version: v1.5.0
   questions:
      - variable: "CATTLE_URL"
        description: "The v2-beta Rancher Server Endpoint"
-       label: "Rancher Server Endpoint URL"
+       label: "Rancher Server Endpoint URL. e.g. https://try.rancher.com/v2-beta"
        required: true
        type: "string"
      - variable: "CATTLE_ACCESS_KEY"
@@ -21,7 +21,8 @@
        required: true
        type: "string" 
      - variable: "FUNCTION_STACK_NAME"
-       description: "The stack name faas functions will be deployed to. Don't forget to create it!"
+       default: "faas-functions"
+       description: "The stack name faas functions will be deployed to. If it doesn't exist, it will be created automatically."
        label: "Functions Stack Name"
        required: true
        type: "string" 
